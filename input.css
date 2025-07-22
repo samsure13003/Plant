@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lobster&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Playwrite+NL+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Triodion&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-family-sans: 'Inter', sans-serif;
+    --font-family-serif: 'Josefin Sans', serif;
+    --font-family-mono: 'Oxanium', monospace;   
+    --font-family-heading: 'Gruppo', sans-serif;
+    --font-family-body: 'MuseoModerno', sans-serif;
+    --font-family-code: 'Playwrite NL Guides', monospace;
+    --font-family-code-2: 'Poppins', sans-serif;
+    --font-family-code-3: 'Roboto', sans-serif;
+    --font-family-code-4: 'Sour Gummy', sans-serif;
+    --font-family-code-5: 'Triodion', sans-serif;
+    --font-family-code-6: 'KoHo', sans-serif;
+    --font-family-code-7: 'Madimi One', sans-serif;
+    --font-family-code-8: 'Lobster', cursive;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px; /* as per your config */
+    padding-right: 30px;
+}
+@media (min-width: 640px) {
+    .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+@media (min-width: 900px) {
+    .container {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+section{
+    @apply py-10 md:py-16 xl:py-20;
+}
+h1{
+    @apply text-3xl md:text-4xl lg:text-5xl;
+}
+h2{
+    @apply text-2xl md:text-3xl lg:text-4xl;
+}
+h3{
+    @apply text-xl md:text-2xl lg:text-3xl;
+}
+.nav-link{
+    @apply duration-300;
+}
+.nav-link:hover{
+    @apply text-amber-500;
+}
+.btn{
+    @apply px-5 py-2 border-1 border-amber-500 bg-amber-500 cursor-pointer rounded-lg duration-300 hover:opacity-80 font-family-serif font-bold;
+}
+.btn_outline{
+    @apply bg-transparent text-white cursor-pointer rounded-lg duration-300 hover:bg-amber-500;
+}
+.btn_outline2{
+    @apply bg-green-950 text-white border-0 hover:opacity-100 hover:text-amber-500;
+}
+#lil_btn{
+    @apply text-amber-500 p-2 cursor-pointer duration-300 hover:shadow-black hover:shadow-lg;
+}
+@theme {
+    --animate-wiggle: wiggle 3s ease-in-out infinite;
+    @keyframes wiggle {
+        0%{
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.3);
+    }
+        100% {
+        transform: scale(1);
+    }
+    }
+}
+.popular__card:hover img{
+    @apply -top-8;
+}
+
+/*-----active link-----*/
+.active{
+    @apply text-amber-500 font-bold;
+}
